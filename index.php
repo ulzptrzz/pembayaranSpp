@@ -13,10 +13,10 @@ $result = mysqli_query($conn, "SELECT * FROM pembayaran_spp");
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
+<body class="bg-info">
     <div class="container mt-5">
-        <h1 class="text-center text-primary mb-4">Data Pembayaran SPP</h1>
-        <a href="tambah.php" class="btn btn-success mb-3">Tambah Data</a>
+        <h1 class="text-center text-light fw-bold fs-2 mb-4">Data Pembayaran SPP</h1>
+        <a href="tambah.php" class="btn btn-light mb-3">Tambah Data</a>
         <table class="table table-striped table-bordered table-hover">
             <thead class="table-dark">
                 <tr>
