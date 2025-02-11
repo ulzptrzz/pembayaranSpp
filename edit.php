@@ -7,13 +7,13 @@ $data = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM pembayaran_spp WHE
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nama = $_POST['nama'];
     $kelas = $_POST['kelas'];
-    $bulan = $_POST['bulan'];
+    $walas = $_POST['walas'];
     $tahun = $_POST['tahun'];
     $jumlah = $_POST['jumlah'];
     $tanggal_bayar = $_POST['tanggal_bayar'];
 
     $query = "UPDATE pembayaran_spp SET 
-              nama_siswa='$nama', kelas='$kelas', bulan='$bulan', tahun='$tahun', jumlah='$jumlah', tanggal_bayar='$tanggal_bayar' 
+              nama_siswa='$nama', kelas='$kelas', walas='$walas', tahun='$tahun', jumlah='$jumlah', tanggal_bayar='$tanggal_bayar' 
               WHERE id=$id";
     mysqli_query($conn, $query);
 
@@ -42,8 +42,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="text" name="kelas" class="form-control" value="<?= $data['kelas'] ?>" required>
             </div>
             <div class="mb-3">
-                <label>Bulan</label>
-                <input type="text" name="bulan" class="form-control" value="<?= $data['bulan'] ?>" required>
+                <label>Walas</label>
+                <input type="text" name="walas" class="form-control" value="<?= $data['walas'] ?>" required>
             </div>
             <div class="mb-3">
                 <label>Tahun</label>

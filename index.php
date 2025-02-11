@@ -23,7 +23,7 @@ $result = mysqli_query($conn, "SELECT * FROM pembayaran_spp");
                     <th>No</th>
                     <th>Nama Siswa</th>
                     <th>Kelas</th>
-                    <th>Bulan</th>
+                    <th>Walas</th>
                     <th>Tahun</th>
                     <th>Jumlah</th>
                     <th>Tanggal Bayar</th>
@@ -38,7 +38,7 @@ $result = mysqli_query($conn, "SELECT * FROM pembayaran_spp");
                     echo "<td>" . $no++ . "</td>";
                     echo "<td>" . $row['nama_siswa'] . "</td>";
                     echo "<td>" . $row['kelas'] . "</td>";
-                    echo "<td>" . $row['bulan'] . "</td>";
+                    echo "<td>" . $row['walas'] . "</td>";
                     echo "<td>" . $row['tahun'] . "</td>";
                     echo "<td>Rp " . number_format($row['jumlah'], 2, ',', '.') . "</td>";
                     echo "<td>" . $row['tanggal_bayar'] . "</td>";

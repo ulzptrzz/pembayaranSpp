@@ -4,13 +4,13 @@ include 'koneksi.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nama = $_POST['nama'];
     $kelas = $_POST['kelas'];
-    $bulan = $_POST['bulan'];
+    $walas = $_POST['walas'];
     $tahun = $_POST['tahun'];
     $jumlah = $_POST['jumlah'];
     $tanggal_bayar = $_POST['tanggal_bayar'];
 
-    $query = "INSERT INTO pembayaran_spp (nama_siswa, kelas, bulan, tahun, jumlah, tanggal_bayar) 
-              VALUES ('$nama', '$kelas', '$bulan', '$tahun', '$jumlah', '$tanggal_bayar')";
+    $query = "INSERT INTO pembayaran_spp (nama_siswa, kelas, walas, tahun, jumlah, tanggal_bayar) 
+              VALUES ('$nama', '$kelas', '$walas', '$tahun', '$jumlah', '$tanggal_bayar')";
     mysqli_query($conn, $query);
 
     header("Location: index.php");
@@ -38,8 +38,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="text" name="kelas" class="form-control" required>
             </div>
             <div class="mb-3">
-                <label>Bulan</label>
-                <input type="text" name="bulan" class="form-control" required>
+                <label>Walas</label>
+                <input type="text" name="walas" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label>Tahun</label>
