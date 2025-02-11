@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
               WHERE id=$id";
     mysqli_query($conn, $query);
 
-    header("Location: index.php");
+    header("Location: data.php");
 }
 ?>
 <!DOCTYPE html>

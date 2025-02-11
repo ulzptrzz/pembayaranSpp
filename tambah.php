@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
               VALUES ('$nama', '$kelas', '$walas', '$tahun', '$jumlah', '$tanggal_bayar')";
     mysqli_query($conn, $query);
 
-    header("Location: index.php");
+    header("Location: status.php");
 }
 ?>
 <!DOCTYPE html>
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body class="bg-info">
     <div class="container mt-5">
-        <h1 class="text-center text-light fw-bold fs-2">Tambah Pembayaran SPP</h1>
+        <h1 class="text-center text-light fw-bold fs-2">Pembayaran SPP</h1>
         <form method="POST">
             <div class="mb-3">
                 <label>Nama Siswa</label>
@@ -54,7 +54,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="date" name="tanggal_bayar" class="form-control" required>
             </div>
             <button type="submit" class="btn btn-success">Simpan</button>
-            <a href="index.php" class="btn btn-secondary">Kembali</a>
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
