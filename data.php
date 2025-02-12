@@ -15,7 +15,11 @@ $result = mysqli_query($conn, "SELECT * FROM pembayaran_spp");
 </head>
 <body class="bg-info">
     <div class="container mt-5">
-        <h1 class="text-center text-light fw-bold mt-5 fs-2 mb-5">Data Pembayaran SPP</h1>
+        <h1 class="text-center text-light fw-bold  fs-2 mb-3">Data Pembayaran SPP</h1>
+        <div class="d-flex justify-content-start">
+            <a href="index.php" class="btn btn-light mx-2 mt-4 mb-3">Kembali</a>
+            <a href="perhitungan.php" class="btn btn-light mt-4 mb-3">Lanjut</a>
+        </div>
         <div class="table-responsive p-3 rounded shadow">
             <table class="table table-striped table-bordered table-hover">
                 <thead class="table-dark">
@@ -54,7 +58,7 @@ $result = mysqli_query($conn, "SELECT * FROM pembayaran_spp");
                 </tbody>
             </table>
         </div>
-        <a href="index.php" class="btn btn-light mt-4 mb-5">Kembali</a>
+        
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

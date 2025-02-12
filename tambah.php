@@ -30,11 +30,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <h1 class="text-center text-light fw-bold fs-2">Pembayaran SPP</h1>
         <form method="POST">
             <div class="mb-3">
-                <label>Nama Siswa</label>
+                <label for="action">Nama Siswa</label>
                 <input type="text" name="nama" class="form-control" required>
             </div>
             <div class="mb-3">
-                <label>Kelas</label>
+                <label for="action">Kelas</label>
                 <input type="text" name="kelas" class="form-control" required>
             </div>
             <div class="mb-3">
@@ -42,11 +42,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="text" name="walas" class="form-control" required>
             </div>
             <div class="mb-3">
-                <label>Tahun</label>
+                <label >Tahun</label>
                 <input type="number" name="tahun" class="form-control" required>
             </div>
             <div class="mb-3">
-                <label>Jumlah</label>
+                <label for="jumlah">Jumlah</label>
                 <input type="number" step="0.01" name="jumlah" class="form-control" required>
             </div>
             <div class="mb-3">
