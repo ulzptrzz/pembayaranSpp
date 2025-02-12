@@ -23,7 +23,7 @@ $result = mysqli_query($conn, "SELECT * FROM pembayaran_spp");
         <div class="table-responsive p-3 rounded shadow">
             <table class="table table-striped table-bordered table-hover">
                 <thead class="table-dark">
-                    <tr>
+                    <tr class="mx-5">
                         <th>No</th>
                         <th>Nama Siswa</th>
                         <th>Kelas</th>

@@ -30,7 +30,7 @@ $conn->close();
 </head>
 <body class="bg-info d-flex align-items-center vh-100 text-center">
     <div class="container">
-        <h2 class="mb-4 fw-bold">Statistik Pembayaran SPP</h2>
+        <h2 class="mb-4 fw-bold text-light">Statistik Pembayaran SPP</h2>
         <div class="card shadow-lg p-3 mb-5 bg-white rounded">
             <div class="card-body">
                 <p><strong>Total Pembayaran:</strong> Rp <?= $total; ?></p>
