@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body class="bg-info">
     <div class="container mt-5">
-        <h1 class="text-center text-light fw-bold fs-2">Pembayaran SPP</h1>
+        <h1 class="text-center text-light fw-bold fs-2 mb-4">Pembayaran SPP</h1>
         <form method="POST">
             <div class="mb-3">
                 <label for="action">Nama Siswa</label>
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <label>Tanggal Bayar</label>
                 <input type="date" name="tanggal_bayar" class="form-control" required>
             </div>
-            <button type="submit" class="btn btn-success">Simpan</button>
+            <button type="submit" class="btn btn-secondary">Simpan</button>
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
