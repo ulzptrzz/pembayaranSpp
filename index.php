@@ -16,7 +16,7 @@
             <img src="./logo.png" width="250vh" alt="Gambar Transaksi" class="img-fluid">
         </div>
 
-        <a href="tambah.php" class="btn btn-light btn-lg mt-2 px-5 fw-bold">Masuk</a>
+        <a href="tambah.php" class="btn btn-light btn-outline-primary btn-lg mt-2 px-5 fw-bold">Masuk</a>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

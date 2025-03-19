@@ -103,7 +103,6 @@ $totalPages = ceil($totalData / $limit);
             <a href="index.php" class="btn btn-light mx-2 mt-3 mb-3">Kembali</a>
             <a href="perhitungan.php" class="btn btn-light mt-3 mb-3">Lanjut</a>
         </div>
-
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
