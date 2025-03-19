@@ -22,23 +22,50 @@
     }
 
     $result = $conn->query($sql);
-
-    if ($result->num_rows > 0){
-        $row = $result->fetch_assoc();
-        echo "<h3>Hasil Agregat</h3>";
-
-        if($action == 'sum') {
-            echo "Total keuangan : " . number_format($row['total_payment'], 2); 
-        } elseif ($action == 'avg') {
-            echo "Total rata-rata : " . number_format($row['average_payment'], 2);
-        } elseif ($action == 'max') {
-            echo "Bayar terbanyak : " . number_format($row['highest_payment'], 2); 
-        } elseif ($action == 'min') {
-            echo "Bayar Tersedikit: " . number_format($row['lowest_payment'], 2);
-        }
-    } else {
-        echo "Tidak ada data dalam tabel.";
-    }
-    
-$conn->close();
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Agregat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-info d-flex justify-content-center align-items-center vh-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-lg">
+                    <div class="card-body text-center">
+                        <h3 class="text-primary fw-bold">Hasil Agregat</h3>
+                        <hr>
+                        <?php 
+                        if ($result->num_rows > 0) {
+                            $row = $result->fetch_assoc();
+                            echo "<div class='alert alert-primary fs-5'>";
+                            if($action == 'sum') {
+                                echo "Total Keuangan: <strong>Rp " . number_format($row['total_payment'], 2, ',', '.') . "</strong>"; 
+                            } elseif ($action == 'avg') {
+                                echo "Total Rata-rata: <strong>Rp " . number_format($row['average_payment'], 2, ',', '.') . "</strong>";
+                            } elseif ($action == 'max') {
+                                echo "Bayar Terbanyak: <strong>Rp " . number_format($row['highest_payment'], 2, ',', '.') . "</strong>"; 
+                            } elseif ($action == 'min') {
+                                echo "Bayar Tersedikit: <strong>Rp " . number_format($row['lowest_payment'], 2, ',', '.') . "</strong>";
+                            }
+                            echo "</div>";
+                        } else {
+                            echo "<div class='alert alert-danger'>Tidak ada data dalam tabel.</div>";
+                        }
+                        ?>
+                        <a href="perhitungan.php" class="btn btn-primary mt-3">Kembali</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<?php $conn->close(); ?>

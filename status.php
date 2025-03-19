@@ -16,7 +16,7 @@
             <div class="status d-flex align-items-center p-4 bg-white shadow rounded">
                 <div class="status-icon status-success">&#10004;</div>
                 <div class="status-text">
-                    <h3 class="status-title fw-bold text-success mb-0">Pembayaran Berhasil</h3>
+                    <h3 class="status-title fw-bold text-success mb-0">Pembayaran Selesai</h3>
                 </div>
             </div>
         </div>
